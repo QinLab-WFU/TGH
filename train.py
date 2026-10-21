@@ -6,17 +6,10 @@ import torch
 from torch.utils.data import DataLoader
 import scipy.io as scio
 import torch.nn
-from CLIP.train.FTH_crossmodal.hash_model_a import DHaPH, DHaPH_FCTH
-from CLIP.train.base import TrainBase
-from CLIP.model.base.optimization import BertAdam
-
 import time
 import torch.nn.functional as F
 from .utils._utils import calc_learnable_params
 from .utils.calc_utils import calc_map_k_matrix as calc_map_k, calc_map_k_from_dist, calc_recall_at_1
-from CLIP.dataset_zs.dataloader import dataloader
-from .MSLoss import MSLoss
-from .IDMLloss import IDMLLoss, Tripletloss_ML
 from pynvml import *
 from .utils.sampler import ParametricSampler
 from .get_args import get_args
